@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding:0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: rgb(255, 244, 244);
+}
+.navbar-brand{
+    font-family: bilie;
+}
+@font-face {
+    font-family: bilie;
+    src: url(font_titulo/Sketch\ Bego\ Fill.ttf);
+}
+@font-face {
+    font-family: bego;
+    src: url(font_titulo/Sketch\ Bego\ Fill.ttf);
+}
+@font-face {
+    font-family: relax;
+    src: url(font2/Relax.otf);
+}
+.autor{
+    display: flex;
+    flex-direction: row;
+
+}
+.deya1, .deya2{
+    margin: 10px;
+}
+#autora{ 
+    width: 300px;
+    border-radius: 90px;
+}
+.titulo{
+    font-family: bilie;
+    padding-left: 10px;
+}
+.nome_autora, .obra{
+    font-family: bego;
+    text-align: center;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 30px;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 2%;
+}
+h1{
+   font-family: bilie; 
+}
+.tirinha{
+    text-align: center;
+}
+#logo{
+    width: 10%;
+}
+
+/* Imagem da autora com arco-iris */
+.botao{
+    border: none;
+    outline: none;
+    background: #fff6f6;
+    /* autera cursor para mãozinha */
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 30%;
+}
+.botao:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    border-radius: 30%;
+}
+.botao:active{
+    color: #fffafa;
+
+}
+.botao:active::after{
+    background: transparent;
+   
+}
+.botao:hover:before {
+    opacity: 1;
+   
+}
+.botao:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff8f8;
+    left: 0;
+    top: 0;
+    border-radius: 30%;
+   
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#in{
+    border: solid 2px rgb(218, 218, 218);
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.pesq{
+    background-color: rgb(226, 236, 255);
+    padding: 5px;
+    border-radius: 10px;
+}
+.pesq_in{
+    margin-left: 150px;
+}
+
+/* Capa do livro girando a 180 graus */
+.flip-container {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  perspective: 1000px; 
+  margin-left: 200px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+.flip-container:hover{
+    transform: scale(1.1);
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+#switch{
+  display: none;
+}
+
+#switch:checked ~ .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+#capa, #contracapa{
+    width: 400px;
+}
+/* =================================================================== */
+.livro{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+footer{
+    padding: 50px;
+    background-color: rgb(226, 236, 255);
+}
+.autor2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.tirinhas{
+    margin-top: 40px;
+    width: 448px;
+}
+#desenho{
+    width: 600px;
+    padding: 40px;
+}
+.desenho{
+     transition: transform 0.5s;
+}
+.desenho:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.titulo_livro{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 5px;
+    font-family: bilie;
+    margin-top: 30px;
+}
+/* __________________ Botões do Rodapé _______________ */
+.aba_1{
+    display: flex;
+    flex-direction: row;
+}
+.aba_2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.bt_insta, .bt_linkedin{
+    border-radius: 30%;
+    cursor: pointer;
+}
+.bt_github{
+    border-radius: 30%;
+    cursor: pointer;
+}
+#insta, #linkedin{
+    width: 20px;
+}
+#github{
+    width: 22px;
+    border-radius: 20px;
+}
+.insta_text, .linkedin_text, .github_text{
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.direitos{
+    display: flex;
+    justify-content: center;
+}
+.rodape{
+    grid-template-columns: auto;
+}
