@@ -1,3 +1,4 @@
+/* Feito por Camila Rodrigues */
 *{
     margin: 0;
     padding:0;
@@ -14,10 +15,7 @@ background-color: rgb(255, 244, 244);
     font-family: bilie;
     src: url(font_titulo/Sketch\ Bego\ Fill.ttf);
 }
-@font-face {
-    font-family: bego;
-    src: url(font_titulo/Sketch\ Bego\ Fill.ttf);
-}
+
 .autor{
     display: flex;
     flex-direction: row;
@@ -35,7 +33,7 @@ background-color: rgb(255, 244, 244);
     padding-left: 10px;
 }
 .nome_autora, .obra{
-    font-family: bego;
+    font-family: bilie;
     text-align: center;
 }
 p{
@@ -46,7 +44,7 @@ p{
     padding-top: 2%;
 }
 h1{
-   font-family: bego; 
+   font-family: bilie; 
 }
 .tirinha{
     text-align: center;
