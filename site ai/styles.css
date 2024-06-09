@@ -18,10 +18,6 @@ background-color: rgb(255, 244, 244);
     font-family: bego;
     src: url(font_titulo/Sketch\ Bego\ Fill.ttf);
 }
-@font-face {
-    font-family: relax;
-    src: url(font2/Relax.otf);
-}
 .autor{
     display: flex;
     flex-direction: row;
